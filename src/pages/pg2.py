@@ -6,11 +6,14 @@ import pandas as pd
 import plotly.io as pio
 import plotly.graph_objects as go
 import pymssql
-from config import database
-from config import username
-from config import password
-from config import serverdb
+import os
+database = os.getenv('database')
+username = os.getenv('username')
+password = os.getenv('password')
+serverdb = os.getenv('serverdb')
 
+database = os.environ.get('DATABASE')
+print(database)
 template = pio.templates.default = "plotly_white"
 import pickle
 from datetime import date

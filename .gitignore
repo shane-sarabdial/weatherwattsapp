@@ -1,2 +1,4 @@
 config.py
 .env
+/cache
+/cache-directory

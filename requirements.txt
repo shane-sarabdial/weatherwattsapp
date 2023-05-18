@@ -9,3 +9,4 @@ dash-tools
 pyarrow==12.0.0
 fastparquet==0.5.0
 lightgbm==3.3.5
+python-dotenv==1.0.0

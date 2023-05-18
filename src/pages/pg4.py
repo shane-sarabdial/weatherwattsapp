@@ -7,15 +7,17 @@ import plotly.io as pio
 import plotly.graph_objects as go
 import pymssql
 import os
-database = os.getenv('database')
-username = os.getenv('username')
-password = os.getenv('password')
-serverdb = os.getenv('serverdb')
 template = pio.templates.default = "plotly_white"
 import pickle
 from datetime import date
 import datetime
 from flask_caching import Cache
+from dotenv import load_dotenv
+load_dotenv()
+database = os.environ.get('database')
+username = os.environ.get('username_watts')
+password = os.environ.get('password')
+serverdb = os.environ.get('serverdb')
 
 dash.register_page(__name__,
                    path='/florida',  # represents the url text

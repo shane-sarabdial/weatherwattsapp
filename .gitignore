@@ -1,4 +1,5 @@
 config.py
 .env
-/cache
-/cache-directory
+/src/cache
+/src/cache-directory
+.idea

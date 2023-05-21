@@ -10,7 +10,7 @@ dash.register_page(__name__,
                    name='Home',  # name of page, commonly used as name of link
                    title='Index',  # title that appears on browser's tab
                    image='pg1.png',  # image in the assets folder
-                   description='Histograms are the new bar charts.'
+                   order=0
                    )
 
 # page 1 data

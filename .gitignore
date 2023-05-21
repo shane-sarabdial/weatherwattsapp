@@ -3,3 +3,4 @@ config.py
 /src/cache
 /src/cache-directory
 .idea
+scrap.ipynb

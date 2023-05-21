@@ -56,11 +56,11 @@ app.layout = dbc.Container([
             dbc.Col(
                 [
                     dash.page_container
-                ], xs=8, sm=8, md=10, lg=11, xl=11, xxl=11)
+                ], xs=8, sm=8, md=10, lg=12, xl=12, xxl=12)
         ]
     )
 ], fluid=True)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

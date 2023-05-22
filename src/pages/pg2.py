@@ -107,7 +107,7 @@ def get_data_sql():
 
 TX_pred = get_data_sql()
 TX_pred['pred'] = model.predict(TX_pred)
-fig5 = px.line(data_frame=TX_pred, x=TX_pred.index, y='pred', title='Predicting Demand in 3 Days',
+fig5 = px.line(data_frame=TX_pred, x=TX_pred.index, y='pred', title='Forecasting Demand in 3 Days',
                color_discrete_sequence=['rgb(225, 124, 5)'])
 fig5.update_layout(title=dict(
     font_size=20, x=0.5),
@@ -128,7 +128,7 @@ fig6_TX.update_layout(title=dict(
 )
 source_TX = pd.read_csv('../Data/TX/Texas_Net_Electricity_Generation.csv', skiprows=4)
 fig7_TX = px.bar(source_TX, y='Category', x='Texas Net Electricity Generation thousand MWh', orientation='h', color_discrete_sequence=['rgb(237, 173, 8)'],
-              title='Electricity Generation by Source, Feb 2023')
+              title='Energy Generation by Source, Feb 2023')
 fig7_TX.update_layout(title=dict(
     font_size=15, x=0.5),
     yaxis=dict(tickfont_size=13, title_font_size=15),

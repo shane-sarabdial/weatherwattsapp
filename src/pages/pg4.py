@@ -105,7 +105,7 @@ def get_data_sql():
 
 FL_pred = get_data_sql()
 FL_pred['pred'] = model.predict(FL_pred)
-fig5_fl = px.line(data_frame=FL_pred, x=FL_pred.index, y='pred', title='Predicting Demand in 3 Days',
+fig5_fl = px.line(data_frame=FL_pred, x=FL_pred.index, y='pred', title='Forecasting Demand in 3 Days',
                   color_discrete_sequence=['rgb(225, 124, 5)'])
 fig5_fl.update_layout(title=dict(
     font_size=20, x=0.5),
@@ -126,7 +126,7 @@ fig6_fl.update_layout(title=dict(
 )
 source_fl = pd.read_csv('../Data/FL/Florida_Net_Electricity_Generation.csv', skiprows=4)
 fig7_fl = px.bar(source_fl, y='Category', x='Florida Net Electricity Generation thousand MWh', orientation='h', color_discrete_sequence=['rgb(237, 173, 8)'],
-              title='Electricity Generation by Source, Feb 2023')
+              title='Energy Generation by Source, Feb 2023')
 fig7_fl.update_layout(title=dict(
     font_size=15, x=0.5),
     yaxis=dict(tickfont_size=13, title_font_size=15),

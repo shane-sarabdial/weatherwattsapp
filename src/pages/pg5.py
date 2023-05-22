@@ -107,7 +107,7 @@ def get_data_sql():
 
 CA_pred = get_data_sql()
 CA_pred['pred'] = model.predict(CA_pred)
-fig5_ca = px.line(data_frame=CA_pred, x=CA_pred.index, y='pred', title='Predicting Demand in 3 Days',
+fig5_ca = px.line(data_frame=CA_pred, x=CA_pred.index, y='pred', title='Forecasting Demand in 3 Days',
                   color_discrete_sequence=['rgb(225, 124, 5)'])
 fig5_ca.update_layout(title=dict(
     font_size=20, x=0.5),
@@ -128,7 +128,7 @@ fig6_ca.update_layout(title=dict(
 )
 source_ca = pd.read_csv('../Data/CA/California_Net_Electricity_Generation.csv', skiprows=4)
 fig7_ca = px.bar(source_ca, y='Category', x='California Net Electricity Generation thousand MWh', orientation='h', color_discrete_sequence=['rgb(237, 173, 8)'],
-              title='Electricity Generation by Source, Feb 2023')
+              title='Energy Generation by Source, Feb 2023')
 fig7_ca.update_layout(title=dict(
     font_size=15, x=0.5),
     yaxis=dict(tickfont_size=13, title_font_size=15),

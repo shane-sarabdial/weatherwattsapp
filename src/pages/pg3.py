@@ -107,7 +107,7 @@ def get_data_sql():
 
 NY_pred = get_data_sql()
 NY_pred['pred'] = model.predict(NY_pred)
-fig5_ny = px.line(data_frame=NY_pred, x=NY_pred.index, y='pred', title='Predicting Demand in 3 Days',
+fig5_ny = px.line(data_frame=NY_pred, x=NY_pred.index, y='pred', title='Forecasting Demand in 3 Days',
                   color_discrete_sequence=['rgb(225, 124, 5)'])
 fig5_ny.update_layout(title=dict(
     font_size=20, x=0.5),
@@ -128,7 +128,7 @@ fig6_ny.update_layout(title=dict(
 )
 source_ny = pd.read_csv('../Data/NY/New_York_Net_Electricity_Generation.csv', skiprows=4)
 fig7_ny = px.bar(source_ny, y='Category', x='New York Net Electricity Generation thousand MWh', orientation='h', color_discrete_sequence=['rgb(237, 173, 8)'],
-              title='Electricity Generation by Source, Feb 2023')
+              title='Energy Generation by Source, Feb 2023')
 fig7_ny.update_layout(title=dict(
     font_size=15, x=0.5),
     yaxis=dict(tickfont_size=13, title_font_size=15),

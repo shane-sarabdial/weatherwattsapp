@@ -14,6 +14,8 @@ cache = Cache(app.server, config={
     'CACHE_TYPE': 'filesystem',
     'CACHE_DIR': 'cache'
 })
+def server_layout():
+    return dash.page_container
 
 sidebar = dbc.Nav(
             [
@@ -55,7 +57,7 @@ app.layout = dbc.Container([
         [
             dbc.Col(
                 [
-                    dash.page_container
+                    server_layout(),
                 ], xs=8, sm=8, md=10, lg=12, xl=12, xxl=12)
         ]
     )

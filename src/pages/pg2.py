@@ -104,7 +104,6 @@ def get_data_sql():
     df = df.sort_index()
     return df
 
-
 TX_pred = get_data_sql()
 TX_pred['pred'] = model.predict(TX_pred)
 fig5 = px.line(data_frame=TX_pred, x=TX_pred.index, y='pred', title='Forecasting Demand in 3 Days',
